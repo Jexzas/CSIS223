@@ -1,19 +1,6 @@
 #include <iostream>
+#include "clockType.h"
 using namespace std;
-
-class clockType {
-    int hr;
-    int min;
-    int sec;
-    public:
-        clockType(int = 0, int = 0, int = 0);
-        void setTime(int, int, int);
-        void printTime() const;
-        void incrementSeconds();
-        void incrementHours();
-        void incrementMinutes();
-        bool equalTime(const clockType&) const;
-};
 
 clockType::clockType(int hrs, int mins, int secs) {
     hr = hrs;
@@ -28,9 +15,22 @@ void clockType::setTime(int hrs, int mins, int secs) {
 }
 
 void clockType::printTime() const {
-    int hrs = hrs;
-    int secs = sec;
-    int mins = min;
+    if (hr < 10) {
+        cout << "0" << hr << ":";
+    } else {
+        cout << hr << ":";
+    }
+    if (min < 10) {
+        cout << "0" << min << ":";
+    } else {
+        cout << min << ":";
+    }
+    if (sec < 10) {
+        cout << "0" << sec << endl;
+    } else {
+        cout << sec << endl;
+    }
+    
 
 }
 
@@ -57,10 +57,4 @@ void clockType::incrementSeconds() {
 
 bool clockType::equalTime(const clockType& otherClock) const {
     return (hr == otherClock.hr && min == otherClock.min && sec == otherClock.sec);
-}
-
-int main () {
-    clockType myClock(14, 30, 26);
-    // myClock.setTime(10, 23, 23);
-    myClock.printTime();
 }
