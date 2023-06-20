@@ -16,7 +16,7 @@ int main()
     cout << endl;
 
     counter1.incrementCounter();
-    cout << "After Increment counter1: " << counter1.getCounter() << endl;
+    cout << "After Increment counter1: " << counter1.getCouanter() << endl;
 
     cout << "Counter2 = " << counter2.getCounter() << endl;
 

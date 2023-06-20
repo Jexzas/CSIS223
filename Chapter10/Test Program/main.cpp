@@ -16,6 +16,9 @@
 using namespace std;
 
 int main() {
-
+    carType car1("Acura", "MDX", 2017, "Black", 25000, 15);
+    carType car2("Honda", "Accord", 2015, "red", 18000, 35);
+    car1.print();
+    car2.print();
   
 }
