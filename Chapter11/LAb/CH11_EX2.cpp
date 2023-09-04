@@ -1,14 +1,14 @@
 #include <iostream>
-#include "XXXXXXXX.h"
+#include "dateType.h"
 
 using namespace std;
 
 int main()
 {
-    XXXXXXXX date1(3, 15, 2008);
-    XXXXXXXX date2(15, 20, 2008);
-    XXXXXXXX date3(2, 30, 2009);
-    XXXXXXXX date4;
+    Dates date1(3, 15, 2008);
+    Dates date2(15, 20, 2008);
+    Dates date3(2, 30, 2009);
+    Dates date4;
 
     int m, d, y;
 
@@ -43,22 +43,30 @@ int main()
         cout << endl << "this is not a leap year";
     }
 
+
     cout << endl;
     cout << "Enter month day year: ";
-    cin >> m >> d >> y;
-    cout << endl;
+    while(cin >> m >> d >> y) {
+        if (m == 0 && d == 0 && y == 0) {
+            break;
+        }
+        cout << endl;
 
-    date4.setDate(m, d, y);
+        date4.setDate(m, d, y);
 
-    cout << "Date 4: ";
-    date4.printDate();
+        cout << "Date 4: ";
+        date4.printDate();
 
-    if (date4.isLeapYear()) {
-        cout << endl << "this is a leap year";
-    } else {
-        cout << endl << "this is not a leap year";
+        if (date4.isLeapYear()) {
+            cout << endl << "this is a leap year";
+        } else {
+            cout << endl << "this is not a leap year";
+        }
+
+        cout << endl;
+        cout << "Enter month day year or type '0 0 0' to exit: ";
     }
+    
 
-    cout << endl;
     return 0;
 }

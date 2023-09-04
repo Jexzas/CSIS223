@@ -1,10 +1,10 @@
 //Implementation file date
 #include <iostream>
-#include "XXXXXXXX.h"
+#include "dateType.h"
 
 using namespace std;
 
-void XXXXXXXX::setDate(int month, int day, int year)
+void Dates::setDate(int month, int day, int year)
 {
     if (year >= 1) {
         dYear = year;
@@ -59,34 +59,38 @@ void XXXXXXXX::setDate(int month, int day, int year)
                 }
             }
         }
-    }
-    int XXXXXXXX::getDay() const
-    {
-        return dDay;
-    }
-        int XXXXXXXX::getMonth() const
-    {
-        return dMonth;
-    }
-        int XXXXXXXX::getYear() const
-    {
-        return dYear;
-    }
-    bool XXXXXXXX::isLeapYear()
-    {
-        if (((dYear % 4 == 0) && (dYear % 100 != 0)) || dYear % 400 == 0){
-            return true;
-        } else {
-            return false;
-        }
-    }
-    void XXXXXXXX::printDate() const
-    {
-        cout << dMonth << "-" << dDay << "-" << dYear;
-    }
-    //constructor
-    XXXXXXXX::XXXXXXXX(int month, int day, int year)
-    {
-        setDate(month, day, year);
+}
+
+int Dates::getDay() const
+{
+    return dDay;
+}
+    int Dates::getMonth() const
+{
+    return dMonth;
+}
+    int Dates::getYear() const
+{
+    return dYear;
+}
+
+bool Dates::isLeapYear()
+{
+    if (((dYear % 4 == 0) && (dYear % 100 != 0)) || dYear % 400 == 0){
+        return true;
+    } else {
+        return false;
     }
 }
+
+void Dates::printDate() const
+{
+    cout << dMonth << "-" << dDay << "-" << dYear;
+}
+
+//constructor
+Dates::Dates(int month, int day, int year)
+{
+    setDate(month, day, year);
+}
+

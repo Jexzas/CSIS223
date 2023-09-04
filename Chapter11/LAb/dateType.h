@@ -1,7 +1,7 @@
 #ifndef date_H
 #define date_H
 
-class XXXXXXXX {
+class Dates {
     public:
         void setDate(int month, int day, int year);
         //Function to set the date.
@@ -22,7 +22,7 @@ class XXXXXXXX {
         //Function to output the date in the form mm-dd-yyyy.
         bool isLeapYear();
         //Function to determine whether the year is a leap year.
-        XXXXXXXX(int month = 1, int day = 1, int year = 1900);
+        Dates(int month = 1, int day = 1, int year = 1900);
         //Constructor to set the date
         //The member variables dMonth, dDay, and dYear are set
         //according to the parameters
